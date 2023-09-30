@@ -1,35 +1,52 @@
 import Image from "next/image";
 
+//Create a TailwindCss Loader
+// const Wraper: (childern: React.ReactNode) => void;
 export default function Home() {
+  const Wraper = ({ children }: { children: React.ReactNode }): JSX.Element => {
+    return <div className="w-[8rem h-[8rem]">{children}</div>;
+  };
+
   return (
     <main className="text-center mt-5">
       <h1 className="text-5xl font-bold underline">Tailwind css Loader</h1>
-      <div className="flex justify-center mt-2 px-20  py-10">
-        <div className="w-full h-[40rem]  border-2 border-blue-500  bottom-2 text-white flex items-center justify-center">
-          <div className="w-[8rem] h-[8rem]">
-            <div className="w-16 h-16 relative">
-              <div className="w-10 h-10 bg-blue-500 rounded-full absolute top-0 left-0 animate-pulse"></div>
+      <div className="flex justify-center mt-2 px-2 py-10">
+        <div className="w-full h-[40rem] border-2 border-blue-500 bottom-2 text-white flex items-center justify-center">
+          {/* First Loader */}
+          {/*  you can change parent to every one */}
+          <Wraper>
+            <div className=" w-16 h-16 relative">
+              <div className=" w-10 h-10 bg-blue-500 rounded-full absolute top-0 left-0 animate-pulse"></div>
             </div>
-          </div>
+          </Wraper>
+          {/* Second Loader */}
           <div className="w-[8rem] h-[8rem]">
             <div className="flex space-x-2">
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
-              <div className="w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
+              <div className=" w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
+              <div className=" w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
+              <div className=" w-5 h-5 bg-blue-500 rounded-full animate-bounce"></div>
             </div>
           </div>
+          {/* Third Loader */}
           <div className="w-[8rem] h-[8rem]">
             <div className="w-16 h-16 border-4 border-blue-500 border-opacity-50 rounded-full animate-ping"></div>
           </div>
+          {/* fourth Loader */}
           <div className="w-[8rem] h-[8rem]">
             <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
           </div>
+          {/* fifth Button Loader */}
           <div className="w-[8rem] h-[8rem]">
-            <button className="disabled:opacity-50 transition inline-flex items-center justify-center space-x-1.5 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:z-10 shrink-0 border-blue-700/75 focus:ring-blue-600 bg-blue-600 text-white hover:bg-blue-700 hover:border-blue-700 px-3 py-1.5 text-sm font-medium rounded-md">
+            <button
+              className=" disabled:opacity-50 transition inline-flex items-center justify-center space-x-1.5 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:z-10 shrink-0 border-blue-700/50 text-white bg-blue-600  hover:bg-blue-700
+             px-3 py-1.5 text-sm font-medium rounded-md
+            "
+            >
+              {/* where is button wait a while */}
               <div aria-label="Loading..." role="status">
                 <svg
-                  className="animate-spin w-6 h-6 stroke-white"
                   viewBox="0 0 256 256"
+                  className="stroke-white w-6 h-6 animate-spin"
                 >
                   <line
                     x1="128"
@@ -108,9 +125,15 @@ export default function Home() {
               <span>Loading...</span>
             </button>
           </div>
+          {/* sixth Button Loader */}
           <div className="w-[8rem] h-[8rem]">
-            <button className="disabled:opacity-50 transition inline-flex items-center justify-center space-x-1.5 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:z-10 shrink-0 border-blue-700/75 focus:ring-blue-600 bg-blue-600 text-white hover:bg-blue-700 hover:border-blue-700 px-3 py-1.5 text-sm font-medium rounded-md">
+            <button
+              className=" disabled:opacity-50 transition inline-flex items-center justify-center space-x-1.5 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:z-10 shrink-0 border-blue-700/50 text-white bg-blue-600  hover:bg-blue-700
+             px-3 py-1.5 text-sm font-medium rounded-md
+            "
+            >
               <div aria-label="Loading..." role="status">
+                {/* // width and height is same  */}
                 <svg
                   className="animate-spin w-6 h-6 fill-white"
                   viewBox="3 3 18 18"
