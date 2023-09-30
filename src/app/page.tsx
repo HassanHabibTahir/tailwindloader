@@ -4,7 +4,7 @@ import Image from "next/image";
 // const Wraper: (childern: React.ReactNode) => void;
 export default function Home() {
   const Wraper = ({ children }: { children: React.ReactNode }): JSX.Element => {
-    return <div className="w-[8rem h-[8rem]">{children}</div>;
+    return <div className="w-[8rem] h-[8rem]">{children}</div>;
   };
 
   return (
